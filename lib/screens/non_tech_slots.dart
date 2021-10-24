@@ -11,17 +11,14 @@ class NonTechSlots extends StatefulWidget {
 }
 
 class _NonTechSlotsState extends State<NonTechSlots> {
-
-  Widget buildFandomSlotCard(String eventText){
+  Widget buildFandomSlotCard(String eventText) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(eventText,
+        Text(
+          eventText,
           style: GoogleFonts.mcLaren(
-              fontSize: 25,
-              fontWeight: FontWeight.bold,
-              color: Colors.white
-          ),
+              fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
         ),
         bookSlotButton(),
       ],
@@ -33,36 +30,38 @@ class _NonTechSlotsState extends State<NonTechSlots> {
     return Scaffold(
       appBar: AppBar(
         title: Center(
-          child: Text('NonTechSlots',
-            style: GoogleFonts.mcLaren(fontSize: 30,fontWeight: FontWeight.bold),
+          child: Text(
+            'NonTechSlots',
+            style:
+                GoogleFonts.mcLaren(fontSize: 30, fontWeight: FontWeight.bold),
           ),
         ),
       ),
-
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.fromLTRB(10, 8, 10, 8),
           child: Column(
             children: <Widget>[
-
               BuildSlotCard(Colors.amber, 'Dextrous'),
-              SizedBox(height: 8,),
-
-
+              SizedBox(
+                height: 8,
+              ),
               BuildSlotCard(Colors.green, 'Photoshop Royale'),
-              SizedBox(height: 8,),
-
-
+              SizedBox(
+                height: 8,
+              ),
               BuildSlotCard(Colors.red, 'Quiz2Bid'),
-              SizedBox(height: 8,),
-
-
+              SizedBox(
+                height: 8,
+              ),
               BuildSlotCard(Colors.pinkAccent, 'Insight'),
-              SizedBox(height: 8,),
-
+              SizedBox(
+                height: 8,
+              ),
               BuildSlotCard(Colors.blue, 'Cerebro'),
-              SizedBox(height: 8,),
-
+              SizedBox(
+                height: 8,
+              ),
               Container(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height * 0.4,
@@ -77,20 +76,18 @@ class _NonTechSlotsState extends State<NonTechSlots> {
                         topLeft: Radius.circular(10),
                       ),
                       side: BorderSide(width: 2.5, color: Colors.grey)),
-
                   child: Padding(
                     padding: const EdgeInsets.fromLTRB(10, 2, 10, 2),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        Text('Fandom Quiz',
+                        Text(
+                          'Fandom Quiz',
                           style: GoogleFonts.mcLaren(
                               fontSize: 25,
                               fontWeight: FontWeight.bold,
-                              color: Colors.amber
-                          ),
+                              color: Colors.amber),
                         ),
-
                         buildFandomSlotCard('GOT'),
                         buildFandomSlotCard('Friends'),
                         buildFandomSlotCard('Harry Potter'),
@@ -101,22 +98,29 @@ class _NonTechSlotsState extends State<NonTechSlots> {
                   ),
                 ),
               ),
-
-              SizedBox(height: 10,),
-
+              SizedBox(
+                height: 10,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  PrevNextButton('Previous',TechSlots()),
-
+                  PrevNextButton('Previous', TechSlots()),
                   RaisedButton(
+                    splashColor: Colors.grey,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4),
+                      borderRadius: BorderRadius.circular(10),
                     ),
-                    child: Text('Pay Now', style: TextStyle(
-                      fontSize: 25, color: Colors.blue,),),
+                    padding: EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                    child: Text(
+                      'Pay Now',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.blue,
+                      ),
+                    ),
                     onPressed: () {
-
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (BuildContext context) => null));
                     },
                   ),
                 ],

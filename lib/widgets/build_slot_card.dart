@@ -1,13 +1,13 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'book_slots_button.dart';
 
 class BuildSlotCard extends StatelessWidget {
-
   final Color color;
   final String eventText;
 
-  BuildSlotCard(this.color,this.eventText);
+  BuildSlotCard(this.color, this.eventText);
 
   @override
   Widget build(BuildContext context) {
@@ -25,21 +25,18 @@ class BuildSlotCard extends StatelessWidget {
               topLeft: Radius.circular(10),
             ),
             side: BorderSide(width: 2.5, color: Colors.grey)),
-
         child: Padding(
           padding: const EdgeInsets.fromLTRB(10, 2, 10, 2),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Text(eventText,
+              Text(
+                eventText,
                 style: GoogleFonts.mcLaren(
-                    fontSize: 25,
+                    fontSize: 18,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white
-                ),
+                    color: Colors.white),
               ),
-
-
               bookSlotButton(),
             ],
           ),

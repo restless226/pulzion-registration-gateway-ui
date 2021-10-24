@@ -10,14 +10,16 @@ class bookSlotButton extends StatelessWidget {
       ),
       child: Text(
         'Book Slot',
-        style: TextStyle(fontSize: 20, color: Colors.black),
+        style: TextStyle(fontSize: 18, color: Colors.black),
       ),
       onPressed: () {
-        showModalBottomSheet(context: context, builder: (context) {
-          return GestureDetector(
-            child:SlotBookingWindow(null),
-            onTap: (){} ,
-            behavior: HitTestBehavior.opaque ,
+        showModalBottomSheet(
+          context: context,
+          builder: (context) {
+            return GestureDetector(
+              child: SlotBookingWindow(null),
+              onTap: () {},
+              behavior: HitTestBehavior.opaque,
             );
           },
         );

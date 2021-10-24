@@ -68,7 +68,7 @@ class _FormScreenState extends State<FormScreen> {
           }
 
           if (!RegExp(
-              r"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")
+                  r"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")
               .hasMatch(value)) {
             return 'Please enter a valid email Address';
           }
@@ -117,16 +117,16 @@ class _FormScreenState extends State<FormScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // backgroundColor: Colors.grey[600],
+          // backgroundColor: Colors.grey[600],
           title: Center(
               child: Text(
-                "Registration Form",
-                style: TextStyle(
-                  fontFamily: 'McLaren',
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                ),
-              ))),
+        "Registration Form",
+        style: TextStyle(
+          fontFamily: 'McLaren',
+          fontSize: 25,
+          fontWeight: FontWeight.bold,
+        ),
+      ))),
       body: Container(
         margin: EdgeInsets.all(20),
         child: Form(
@@ -214,15 +214,23 @@ class _FormScreenState extends State<FormScreen> {
                 ]),
                 SizedBox(height: 30),
                 RaisedButton(
+                  splashColor: Colors.grey,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 8),
                   child: Text(
                     "Next",
-                    style: TextStyle(color: Colors.blue, fontSize: 16),
+                    style: TextStyle(color: Colors.blue, fontSize: 18),
                   ),
                   onPressed: () {
                     if (!_formKey.currentState.validate()) {
                       return;
                     }
-                    Navigator.pushReplacement(context,MaterialPageRoute(builder: (BuildContext context) => TechEvent()));
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext context) => TechEvent()));
                     _formKey.currentState.save();
                     print(_name1);
                     print(_emailId);

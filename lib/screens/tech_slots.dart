@@ -17,8 +17,10 @@ class _TechSlotsState extends State<TechSlots> {
     return Scaffold(
       appBar: AppBar(
         title: Center(
-          child: Text('TechSlots',
-            style: GoogleFonts.mcLaren(fontSize: 30,fontWeight: FontWeight.bold),
+          child: Text(
+            'TechSlots',
+            style:
+                GoogleFonts.mcLaren(fontSize: 25, fontWeight: FontWeight.bold),
           ),
         ),
       ),
@@ -27,40 +29,43 @@ class _TechSlotsState extends State<TechSlots> {
           padding: const EdgeInsets.fromLTRB(10, 8, 10, 8),
           child: Column(
             children: <Widget>[
-
               BuildSlotCard(Colors.amber, 'Code Buddy'),
-              SizedBox(height: 8,),
-
+              SizedBox(
+                height: 8,
+              ),
               BuildSlotCard(Colors.green, 'Data Quest'),
-              SizedBox(height: 8,),
-
+              SizedBox(
+                height: 8,
+              ),
               BuildSlotCard(Colors.red, 'Web-App Dev'),
-              SizedBox(height: 8,),
-
+              SizedBox(
+                height: 8,
+              ),
               BuildSlotCard(Colors.pinkAccent, 'ElectroQuest'),
-              SizedBox(height: 8,),
-
+              SizedBox(
+                height: 8,
+              ),
               BuildSlotCard(Colors.blue, 'Bug-Off'),
-              SizedBox(height: 8,),
-
+              SizedBox(
+                height: 8,
+              ),
               BuildSlotCard(Colors.brown, 'Just Coding'),
-              SizedBox(height: 8,),
-
+              SizedBox(
+                height: 8,
+              ),
               BuildSlotCard(Colors.teal, 'Recode It'),
-              SizedBox(height: 10,),
-
+              SizedBox(
+                height: 10,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  PrevNextButton('Previous',NonTechEvent()),
-
-                  PrevNextButton('Next',NonTechSlots()),
+                  PrevNextButton('Previous', NonTechEvent()),
+                  PrevNextButton('Next', NonTechSlots()),
                 ],
               ),
-
             ],
           ),
-
         ),
       ),
     );
