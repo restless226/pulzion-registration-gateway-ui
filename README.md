@@ -1,4 +1,4 @@
-# pulzion_registeration_gateway_UI
+# pulzion_registeration_gateway_ui
 
 • Registeration Gateway UI Design for Pulzion Application (Gatway UI was used in actual application during 2020 college fest).
 
