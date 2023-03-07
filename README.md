@@ -1,13 +1,13 @@
-# pulzion_registeration_gateway_ui
+# pulzion-registration-gateway-ui
 
-- Registeration Gateway UI Design for Pulzion Application (Gatway UI was used in actual application during 2020 college fest).
+- Registration Gateway UI Design for Pulzion Application (Gatway UI was used in actual application during 2020 college fest).
 
 ## Tech stack used
-- Android, Flutter, Dart
+- Android, Flutter, Dart.
 
 ## Features
 
-- It accepts registeration details (with validations) of a user and then user can select Technical and Non-Technical events to participate.
+- It accepts registration details (with validations) of a user and then user can select Technical and Non-Technical events to participate.
 
 - Desired slots can booked individually for selected events and then user will be redirected to the Payment Gateway.
 
